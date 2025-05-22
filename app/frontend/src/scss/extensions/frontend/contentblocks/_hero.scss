@@ -1,0 +1,68 @@
+@use '@/scss/mixins/breakpoints' as Br;
+
+.contentblock-hero {
+    position: relative;
+
+    img {
+        width: 100%;
+        height: calc(100vh - 100px);
+        object-fit: cover;
+    }
+
+    .container {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-bottom: 10%;
+
+        .content {
+            position: relative;
+            max-width: 100%;
+            padding: 25px;
+            color: var(--white);
+
+            .background {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background-color: var(--base-blue);
+                opacity: 0.8;
+                z-index: -1;
+            }
+
+            .headline {
+                font-size: 2rem;
+                font-weight: 600;
+                margin-bottom: 1rem;
+            }
+        }
+    }   
+
+    @include Br.breakpoint-up(md) {
+        .container {
+            .content {
+                max-width: 80%;
+
+                .headline {
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+
+    @include Br.breakpoint-up(xl) {
+        .container {
+            .content {
+                padding: 50px;
+            }
+        }
+    }
+}

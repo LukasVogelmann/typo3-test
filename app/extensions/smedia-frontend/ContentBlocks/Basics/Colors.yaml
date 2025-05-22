@@ -1,0 +1,14 @@
+identifier: schommer-media/Colors
+fields:
+  - identifier: color
+    type: Select
+    renderType: selectSingle
+    items:
+      - label: Weiss
+        value: white
+      - label: Schwarz
+        value: black
+      - label: Gold
+        value: base-gold
+      - label: Dunkelblau
+        value: base-blue

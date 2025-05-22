@@ -1,0 +1,60 @@
+// default/general configuration (will add 'children_<colPos>' variable to processedData for each colPos in container
+tt_content.1-col-container < lib.contentElement
+tt_content.1-col-container {
+    templateName = 1ColContainer
+    templateRootPaths {
+        10 = EXT:smedia_frontend/Resources/Private/Extensions/Container/Templates/
+    }
+     dataProcessing {
+        201 = B13\Container\DataProcessing\ContainerProcessor
+        201 {
+            colPos = 201
+            as = children_201
+        }
+    }
+}
+
+tt_content.2-col-container < lib.contentElement
+tt_content.2-col-container {
+    templateName = 2ColContainer
+    templateRootPaths {
+        10 = EXT:smedia_frontend/Resources/Private/Extensions/Container/Templates/
+    }
+    dataProcessing {
+        211 = B13\Container\DataProcessing\ContainerProcessor
+        211 {
+            colPos = 211
+            as = children_211
+        }
+        212 = B13\Container\DataProcessing\ContainerProcessor
+        212 {
+            colPos = 212
+            as = children_212
+        }
+    }
+}
+
+tt_content.3-col-container < lib.contentElement
+tt_content.3-col-container {
+    templateName = 3ColContainer
+    templateRootPaths {
+        10 = EXT:smedia_frontend/Resources/Private/Extensions/Container/Templates/
+    }
+     dataProcessing {
+        221 = B13\Container\DataProcessing\ContainerProcessor
+        221 {
+            colPos = 221
+            as = children_221
+        }
+        222 = B13\Container\DataProcessing\ContainerProcessor
+        222 {
+            colPos = 222
+            as = children_222
+        }
+        223 = B13\Container\DataProcessing\ContainerProcessor
+        223 {
+            colPos = 223
+            as = children_223
+        }
+    }
+}

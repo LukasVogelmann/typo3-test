@@ -1,0 +1,56 @@
+identifier: schommer-media/Image
+fields:
+  - identifier: images-palette
+    type: Palette
+    label: Images
+    fields:
+      - identifier: image
+        type: File
+        minitems: 1
+        allowed: common-media-types
+        cropVariants:
+          desktop:
+            title: Desktop
+            allowedAspectRatios:
+              free:
+                title: Free
+                value: 0.0
+              landscape:
+                title: Landscape
+                value: 4 / 3
+              portrait:
+                title: Portrait
+                value: 0.75
+              square:
+                title: Square
+                value: 1 / 1
+          tablet:
+            title: Tablet
+            allowedAspectRatios:
+              free:
+                title: Free
+                value: 0.0
+              landscape:
+                title: Landscape
+                value: 4 / 3
+              portrait:
+                title: Portrait
+                value: 0.75
+              square:
+                title: Square
+                value: 1 / 1
+          smartphone:
+            title: Smartphone
+            allowedAspectRatios:
+              free:
+                title: Free
+                value: 0.0
+              landscape:
+                title: Landscape
+                value: 4 / 3
+              portrait:
+                title: Portrait
+                value: 0.75
+              square:
+                title: Square
+                value: 1 / 1

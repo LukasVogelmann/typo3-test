@@ -1,0 +1,56 @@
+@use '@/scss/mixins/breakpoints' as Br;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+);
+
+.container-fluid {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+
+    @each $breakpoint, $max-width in $container-max-widths {
+        @include Br.breakpoint-up($breakpoint) {
+            max-width: $max-width;
+            padding: 0;
+        }
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem var(--grid-gap, 0px); // Default to 0px if not set | Set variable in HTML: <div class="row" style="--grid-gap: {data.grid_gap}px;"></div>
+}
+
+.col {
+    @for $i from 1 through 12 {
+        &-#{$i} {
+            $width: calc((100% / 12 * $i) - (var(--grid-gap, 0px) * (1 - (1 / 12 * $i)))); 
+            flex: 1 0 $width;
+            max-width: $width;
+        }
+    }
+
+    @each $breakpoint, $_ in $container-max-widths {
+        @include Br.breakpoint-up($breakpoint) {
+            @for $i from 1 through 12 {
+                &-#{$breakpoint}-#{$i} {
+                    $width: calc((100% / 12 * $i) - (var(--grid-gap, 0px) * (1 - (1 / 12 * $i)))); 
+                    flex: 1 0 $width;
+                    max-width: $width;
+                }
+            }
+        }
+    }
+}

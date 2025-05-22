@@ -1,0 +1,14 @@
+* , :after, :before {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    margin: 100px 0 0 0;
+}
+
+#content {
+    width: 100%;
+    overflow-x: hidden;
+}

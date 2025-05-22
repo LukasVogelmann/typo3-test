@@ -1,0 +1,26 @@
+<f:if condition="{image}">
+    <f:then>
+        <picture>
+            <source
+                data-identifier="smartphone"
+                srcset="{f:uri.image(image: image, treatIdAsReference: 1, cropVariant: 'smartphone')}"
+                media="(min-width: 0px) and (max-width: 767px)"
+            />
+            <source
+                data-identifier="tablet"
+                srcset="{f:uri.image(image: image, treatIdAsReference: 1, cropVariant: 'tablet')}"
+                media="(min-width: 768px) and (max-width: 991px)"
+            />
+            <source
+                data-identifier="desktop"
+                srcset="{f:uri.image(image: image, treatIdAsReference: 1, cropVariant: 'desktop')}"
+                media="(min-width: 992px)"
+            />
+            <f:image src="{image.uid}" treatIdAsReference="1" alt="{image.alternative}"/>
+        </picture>
+    </f:then>
+
+    <f:else>
+        <f:debug inline="1">{image}</f:debug>
+    </f:else>
+</f:if>

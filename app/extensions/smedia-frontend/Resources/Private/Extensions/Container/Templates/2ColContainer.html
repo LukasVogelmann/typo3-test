@@ -1,0 +1,82 @@
+<div class="{f:if(condition: '{data.fullsize}', then: 'container-fluid', else: 'container')}">
+    <div class="row" style="--grid-gap: {data.gap}px;">
+        <f:if condition="{children_211}">
+            <f:for each="{children_211}" as="record">
+
+                <f:render section="Column" arguments="{record: record, data: data, position: 'left'}" />
+            </f:for>
+        </f:if>
+        <f:if condition="{children_212}">
+            <f:for each="{children_212}" as="record">
+                <f:render section="Column" arguments="{record: record, data: data, position: 'right'}" />
+            </f:for>
+        </f:if>
+    </div>
+    <f:debug>{record}</f:debug>
+</div>
+
+<f:section name="Column">
+    <f:switch expression="{data.two_col_distribution}">
+        <f:case value="1">
+            <f:if condition="{position} == 'left'">
+                <f:then>
+                    <div class="col-12 col-md-4">
+                        <f:format.raw>{record.renderedContent}</f:format.raw>
+                    </div>
+                </f:then>
+                <f:else>
+                    <div class="col-12 col-md-8">
+                        <f:format.raw>{record.renderedContent}</f:format.raw>
+                    </div>
+                </f:else>
+            </f:if>
+        </f:case>
+        <f:case value="2">
+            <f:if condition="{position} == 'left'">
+                <f:then>
+                    <div class="col-12 col-md-8">
+                        <f:format.raw>{record.renderedContent}</f:format.raw>
+                    </div>
+                </f:then>
+                <f:else>
+                    <div class="col-12 col-md-4">
+                        <f:format.raw>{record.renderedContent}</f:format.raw>
+                    </div>
+                </f:else>
+            </f:if>
+        </f:case>
+        <f:case value="3">
+            <f:if condition="{position} == 'left'">
+                <f:then>
+                    <div class="col-12 col-md-3">
+                        <f:format.raw>{record.renderedContent}</f:format.raw>
+                    </div>
+                </f:then>
+                <f:else>
+                    <div class="col-12 col-md-9">
+                        <f:format.raw>{record.renderedContent}</f:format.raw>
+                    </div>
+                </f:else>
+            </f:if>
+        </f:case>
+        <f:case value="4">
+            <f:if condition="{position} == 'left'">
+                <f:then>
+                    <div class="col-12 col-md-9">
+                        <f:format.raw>{record.renderedContent}</f:format.raw>
+                    </div>
+                </f:then>
+                <f:else>
+                    <div class="col-12 col-md-3">
+                        <f:format.raw>{record.renderedContent}</f:format.raw>
+                    </div>
+                </f:else>
+            </f:if>
+        </f:case>
+        <f:defaultCase>
+            <div class="col-12 col-md-6">
+                <f:format.raw>{record.renderedContent}</f:format.raw>
+            </div>
+        </f:defaultCase>
+    </f:switch>
+</f:section>

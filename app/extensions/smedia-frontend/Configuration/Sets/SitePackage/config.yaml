@@ -1,0 +1,5 @@
+name: schommer-media/smedia-frontend
+label: 'Smedia Frontend'
+dependencies:
+  - typo3/fluid-styled-content
+  - typo3/fluid-styled-content-css

@@ -1,0 +1,14 @@
+:root {
+    --base-gold: #c1b175;
+    --base-blue: #001b2f;
+    --white: #FFF;
+    --black: #000;
+}
+
+[class*="color-"] {
+    color: var(--color, var(--black));
+}
+
+[class*="background-"] {
+    background-color: var(--background, var(--white));
+}

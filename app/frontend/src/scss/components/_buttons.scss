@@ -1,0 +1,25 @@
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--base-gold);
+
+    &:hover {
+        color: var(--base-blue);
+        text-decoration: underline;
+    }
+}
+
+.btn.btn-primary {
+    display: block;
+    border: 1px solid var(--base-gold);
+    border-radius: 50%;    
+    color: var(--base-gold);
+    background-color: var(--base-blue);
+   
+    &:hover {
+        text-decoration: none;
+        border: 1px solid var(--base-blue);
+        color: var(--base-blue);
+        background-color: var(--white);
+    }
+}

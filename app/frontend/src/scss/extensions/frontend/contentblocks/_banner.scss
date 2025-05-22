@@ -1,0 +1,65 @@
+@use '@/scss/mixins/breakpoints' as Br;
+
+.contentblock-banner {
+    .items {
+        display: flex;
+        justify-content: center;
+        padding-block: 20px;
+        flex-wrap: wrap;
+        
+        .item {
+            text-align: center;
+            padding: 20px 10px;
+            width: 50%;
+
+            .image {
+                img {
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+
+            .description {
+                padding-top: 10px;
+
+                p {
+                    color: var(--white);
+                }
+            }
+        }
+    }
+
+    @include Br.breakpoint-up(sm) {
+        .items {    
+            flex-wrap: nowrap;
+            .item {
+                padding: 0 20px;
+                width: 25%;
+
+                .image {
+                    img {
+                        width: 80px;
+                        height: 80px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include Br.breakpoint-up(md) {
+        .items {    
+            padding-block: 40px;
+
+            .item {
+                padding: 0 40px;
+
+                .image {
+                    img {
+                        width: 100px;
+                        height: 100px;
+                    }
+                }
+            }
+        }
+    }
+}

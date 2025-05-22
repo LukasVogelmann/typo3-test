@@ -1,0 +1,18 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers" data-namespace-typo3-fluid="true">
+    <f:layout name="Default" />
+
+    <f:section name="Main">
+        <div class="contentblock-project">
+            <f:for each="{data.items}" as="project" iteration="i">
+                <div class="project">
+                    <div class="image">
+                        <f:render partial="Image" arguments="{image: project.image.0}" />
+                    </div>
+                    <div class="name">
+                        <p>{project.title}</p>
+                    </div>
+                </div>
+            </f:for>
+        </div>
+    </f:section>
+</html>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="EXT:smedia_frontend/ContentBlocks/ContentElements/projects/language/labels.xlf" date="2024-12-05T14:39:00Z" product-name="smedia_frontend">
+        <header/>
+        <body>
+            <trans-unit id="title">
+                <source>Projects</source>
+            </trans-unit>
+            <trans-unit id="description">
+                <source>Showcase Projects</source>
+            </trans-unit>
+            <trans-unit id="items.title.label">
+                <source>Projectname</source>
+            </trans-unit>
+            <trans-unit id="items.image.label">
+                <source>Image</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

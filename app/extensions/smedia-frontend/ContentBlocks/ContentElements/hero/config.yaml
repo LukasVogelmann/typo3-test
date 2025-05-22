@@ -1,0 +1,15 @@
+group: contentblocks
+name: schommer-media/hero
+basics:
+  - TYPO3/Appearance
+  - TYPO3/Links
+fields:
+  - identifier: TYPO3/Header
+    type: Basic
+  - identifier: headline
+    type: Text
+  - identifier: textarea
+    type: Textarea
+    enableRichtext: true
+  - identifier: schommer-media/Image
+    type: Basic

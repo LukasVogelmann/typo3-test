@@ -1,0 +1,24 @@
+@use '@/scss/mixins/breakpoints' as Br;
+
+.contentblock-projects {
+    display: flex;
+    flex-wrap: wrap;
+
+    .item {
+        width: 100%;
+
+        .image {
+            width: 100%;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    @include Br.breakpoint-up(md) {
+        .item {
+            width: 50%;
+        }
+    }
+}

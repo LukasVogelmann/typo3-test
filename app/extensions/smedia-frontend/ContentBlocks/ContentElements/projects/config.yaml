@@ -1,0 +1,24 @@
+group: contentblocks
+name: schommer-media/projects
+basics:
+  - TYPO3/Appearance
+  - TYPO3/Links
+fields:
+  - identifier: TYPO3/Header
+    type: Basic
+  - identifier: items
+    type: Collection
+    labelField: title
+    minitems: 1
+    fields:
+      - identifier: title
+        type: Text
+      - identifier: schommer-media/Image
+        type: Basic
+      - identifier: link
+        label: Link
+        type: Link
+      - identifier: icon
+        type: File
+        minitems: 1
+        allowed: common-media-types

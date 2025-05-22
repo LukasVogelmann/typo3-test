@@ -1,0 +1,26 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers" data-namespace-typo3-fluid="true">
+    <f:layout name="Default" />
+
+    <f:section name="Main">
+        <div class="contentblock-hero">
+            <div class="image">
+                <f:render partial="Image" arguments="{image: data.image.0}" />
+            </div>
+
+            <div class="container">
+               <div class="content">
+                    <div class="background"></div>
+                    <f:if condition="{data.headline}">
+                        <p class="headline">{data.headline}</p>
+                    </f:if>
+
+                    <f:if condition="{data.textarea}">
+                        <div class="text">
+                            <f:format.html parseFuncTSPath="lib.parseFunc">{data.textarea}</f:format.html>
+                        </div>
+                    </f:if>
+               </div>
+            </div>
+        </div>
+    </f:section>
+</html>
